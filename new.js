@@ -23,6 +23,7 @@ var cid = 3;
 var gl = true;
 //var col = '#929292';
 var col = '#2ecc71';
+var col2 = '#0FC'
 var json;
 var onnew = false;
 var czip;
@@ -58,7 +59,8 @@ function traverse(j) {
 
 function setCols() {
     $('.info').css('background-color', 'rgba(0, 0, 0, 0.0)');
-    $('body').css('background-color', col);
+    $('body').css('background', '-webkit-gradient(linear,left top,left bottom,from(' + col + '),to(' + col2 + '))');
+    //$('body').css('background-color', col);
     
 
 }
