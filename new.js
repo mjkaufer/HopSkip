@@ -22,8 +22,10 @@ var cwin = 3;
 var cid = 3;
 var gl = true;
 //var col = '#929292';
-var col = '#2ecc71';
-var col2 = '#0FC'
+//var col = '#2ecc71';
+//var col2 = '#0FC'
+var col = '#25913C';
+var col2 = '#248C54';
 var json;
 var onnew = false;
 var czip;
