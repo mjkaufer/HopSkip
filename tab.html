@@ -1,0 +1,190 @@
+<html>
+<head>
+
+
+    <style>
+        @import url(http://fonts.googleapis.com/css?family=Lato:100,300,900);
+
+
+        ::-webkit-selection {
+            color: white;
+            background-color: black;
+        }
+
+        ::selection {
+            color: #FFF;
+            background-color: #000;
+        }
+
+        .info {
+            /*padding-left:10%;
+        padding-right:10%;*/
+            width: 20%;
+            margin: 0;
+            /*border: solid red 1px;*/
+            color: white;
+            text-align: center;
+            display: inline-block;
+            float: left;
+        }
+
+        .top {
+            width: 50%;
+            margin: auto;
+        }
+
+        #d5 {
+            float: right;
+        }
+
+        #shift {
+            left: -200%;
+            width: 500%;
+            margin: 0;
+            padding: 0;
+            float: left;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            font-weight: 300;
+            font-size: 1.5em;
+            overflow: hidden;
+            background-color: '#8e4480';
+        }
+
+
+
+        textarea {
+            font-family: "Droid Sans";
+            font-size: 16px;
+            line-height: 130%;
+            margin-top: 77px;
+            width: 700px;
+            height: 200px;
+            color: rgba(189, 195, 199,1.0);
+            rows: 15;
+            cols: 80;
+            background: rgba(0, 0, 0, .2);
+            border: 2px solid rgba(255,255,255,0.7);
+            border-radius: 5px;
+        }
+
+        /*#gallery-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            -webkit-filter: blur(10px);
+            z-index: -100;
+        }
+
+        #dd {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: -10;
+            background-color:rgba(0, 0, 0, 0.7);
+        }*/
+    </style>
+
+
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
+    <link rel="stylesheet" type="text/css" href="styleurl.css">
+
+    <title>HopSkip</title>
+    <script src="leap.min.js"></script>
+
+    <script src="jquery-1.10.2.min.js"></script>
+    <script src="annyang.js"></script>
+
+
+    <script src="three.min.js"></script>
+    <script src="TrackballControls.js"></script>
+
+    <script src="new.js"></script>
+
+
+
+
+
+
+</head>
+<body>
+
+    <div id="fancypants"></div>
+
+    <!-- <div id="big" style="display:inline-block;margin:auto;">
+        <div class="info" id="d1">One</div>
+        <div class="info" id="d2">Two</div>
+        <div class="info" id="d3">Three</div>
+        <div class="info" id="d4">Four</div>
+        <div class="info" id="d5">Five</div>
+    </div> -->
+    
+    <img src="ArrowLeft.png" style="position:absolute; left:5%;top:30%;" width="10%" id="left"/>
+
+    <img src="ArrowRight.png" style="position:absolute; right:5%;top:30%;" width="10%" id="right"/>
+
+    <div id="coverlogo" style="background-color:black;width:100%;height:120%;text-align:center;z-index:100;">
+        <img src="intro.gif" height="75%" style="margin:auto;" />
+
+    </div>
+    <div id="shift" style="padding:0;margin:0;top:-10px;position:absolute;">
+        <div class="info" id="d1">
+            <p style="font-size:2.5em;">BBC News</p>
+            <div>
+                <script language="JavaScript" src="http://www.feedroll.com/rssviewer/feed2js.php?src=http%3A%2F%2Ffeeds.bbci.co.uk%2Fnews%2Frss.xml%3Fedition%3Dus%23&chan=title&num=7&au=y&utf=y" charset="UTF-8" type="text/javascript"></script>
+                <script src="feed2js.js"></script>
+                <noscript>
+                    <a href="http://www.feedroll.com/rssviewer/feed2js.php?src=http%3A%2F%2Ffeeds.bbci.co.uk%2Fnews%2Frss.xml%3Fedition%3Dus%23&chan=title&num=7&au=y&utf=y&html=y">View RSS feed</a>
+                </noscript>
+            </div>
+        </div>
+
+        <div class="info" id="d2">
+            <p style="font-size:2.5em;">Top Sites</p>
+        </div>
+
+        <div class="info" id="d3">
+
+            <!--<img src="images/short.png" id="logo" width="70%"/>-->
+
+            <div id="clock" style="font-size:6.5em;font-weight:100;" style="position:absolute;"></div>
+            <p style="margin-top:100px;"><span style="font-size:4.5em;font-weight:100;line-height:0;padding:0;">Hello &nbsp;</span> <span style="font-size:4.5em;font-weight:100;line-height:0;padding:0;">PilotPhilly!</span></p>
+            <p style="margin-top:100px;"><&nbsp; swipe for swag. &nbsp;></p>
+
+        </div>
+        <div class="info" id="d4">
+            <p style="font-size:2.5em;line-height:12px;">Weather</p>
+            <p style="font-size:1em;line-height:12px;" id="z"></p>
+            <img src="http://northvillecloud.com/images/cloud.png" id="wsign" height="200px" width="200px" style="margin-bottom:0;" />
+            <p id="temp" style="line-height:10px;font-size:2em;"></p>
+            <p id="hilo" style="line-height:10px;"></p>
+            <div id="more" style="line-height:10px;">
+                <p id="desc"></p>
+                <p id="rain"></p>
+                <p id="humidity"></p>
+                <p id="wind"></p>
+
+
+            </div>
+
+
+
+        </div>
+        <div class="info" id="d5">
+            <p style="font-size:2.5em;">Notes</p>
+            <textarea id="idTextarea">Notes:</textarea>
+
+        </div>
+    </div>
+
+
+
+
+</body>
+</html>

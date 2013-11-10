@@ -1,0 +1,33 @@
+﻿div.urlContainer{/*div*/
+                 width:100%;
+                 height:100%;
+                 margin-top:0;
+                 padding-top:0;
+                 
+                }
+p.urlContainer{ /*paragraph*/
+                padding-top:10px;
+                padding-bottom:10px;
+width:60%;
+background-color: rgba(0, 0, 0, 0.4);
+margin:0 auto;
+}
+
+a.urlContainer:link {
+    text-decoration:none;
+    color:rgba(0,0,50, 0.85);
+}
+a.urlContainer:visited {
+    text-decoration:none;
+    color:rgba(0,0,50, 0.85);
+}
+a.urlContainer:hover {
+    text-decoration:none;
+    color:rgba(0,0,50, 0.95);
+    border-radius:5px;
+}
+a.urlContainer:active {
+    text-decoration:none;
+    color:rgba(0,0,50, 0.95);
+    border-radius:5px;
+}
