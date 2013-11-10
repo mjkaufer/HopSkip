@@ -42,6 +42,9 @@ chrome.windows.getLastFocused(
 
 }
 
+
+currentURL();
+
 function currentURL() {
 
 
@@ -55,13 +58,6 @@ function currentURL() {
              return window.tabs[i].url;
 
          }
-         // Finding the next tab.
-         // else if (foundSelected)
-         // {
-         //  // Selecting the next tab.
-         //  chrome.tabs.update(window.tabs[i].id, {active: true});
-         //  return;
-         // }
      }
 
  });
@@ -133,6 +129,7 @@ function getCurrent() {
          }
      });
 }
+
 
 
 function remove() {
@@ -243,8 +240,9 @@ function makeNew() {
                                           if (gesture.state == 'stop' && frame.pointables.length == 2)
                                           {
                                               
-
+                                            
                                                   reload(getCurrent());
+                                                  console.log(getCurrent());
                                                   timeout = timeTo;
                                               
 
