@@ -22,12 +22,12 @@ $(document.elementFromPoint(x, y)).click();
 
 $(function() {
 
-    console.log(location.href);
-var leapc = $('<div id="leapcursor" style="border-radius:3px;position:fixed;background-color:orange;top:10px;left:10px;z-index:90000;"></div>');
-leapc.height(10);
-leapc.width(10);
-// var addThis = document.createElement("div");
-$("body").append(leapc);
+//    console.log(location.href);
+//var leapc = $('<div id="leapcursor" style="border-radius:3px;position:fixed;background-color:orange;top:10px;left:10px;z-index:90000;"></div>');
+//leapc.height(10);
+//leapc.width(10);
+//// var addThis = document.createElement("div");
+//$("body").append(leapc);
 
 
 //chrome.runtime.sendMessage({ req: 'url' }, function (response) {

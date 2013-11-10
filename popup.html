@@ -1,17 +1,22 @@
 <html>
 <head>
-    <script src="colorcode.js"></script>
     <script src="jquery-1.10.2.min.js"></script>
     <title>Unecessary</title>
 </head>
-<body onload="startup">
+<body onload="loadBoth">
     <script>
-        startup();
+        
     </script>
-    <form>
-        Background-Color Hex: <input type="text" name="col" id="col"><br>
-        <button type="button" onclick="alert('a');">Submit</button>
-    </form>
+
+
+    <textarea name="style_url" id="style_url" cols=10 rows=2
+              placeholder="929292" id="t1"></textarea>
+    <textarea name="style_url" id="style_url2" cols=10 rows=2
+              placeholder="929292" id="t2"></textarea>
+    <br />
+    <button class="submit">Save</button>
+    <script src="colorcode.js"></script>
+    
 
 </body>
 
